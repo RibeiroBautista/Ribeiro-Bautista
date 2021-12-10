@@ -1,0 +1,326 @@
+*{
+    margin: 0; 
+    padding: 0; 
+    list-style: none;
+    text-decoration: none;
+    font-family: 'EB Garamond', serif;
+}
+body {
+    background-color: #FFD639;
+}
+/*----------------------------------------AREA HEADER----------------------------------------*/
+.menu {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+header 
+{
+    width: 100%;
+    overflow:hidden;
+    background: #FFD639;
+    margin-bottom: auto;
+    position: sticky;
+    top: 0;
+}
+.menuNav {
+    width: 100%;
+    max-width: 1500px;
+    margin: auto;
+    overflow: hidden;
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+header nav {
+    float: right; 
+    line-height: 120px;
+}
+header nav a {
+    display: inline-block;
+    color: #fff;
+    text-decoration: none;
+    list-style: none;
+    justify-content: center;
+    text-align: center;
+    padding: 10px 20px;
+    line-height: normal;
+    font-size: 40px;
+    font-weight: bold;    
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
+    transition: all 500ms ease;
+    border-radius: 80px;
+}
+header nav a:hover {
+    background: black;   
+}
+/*---------------------------------------- FIN HEADER ----------------------------------------*/
+
+/*---------------------------------------- AREA MAIN ----------------------------------------*/
+.container-padre {
+    display: grid;
+    grid-template-areas:
+    "container2 container2 container1 container1"
+    "container2 container2 container1 container1"
+    "container3 container3 container3 container3"
+    "container4 container4 container4 container4"    
+    "container5 container5 container5 container5"
+    "footer footer footer footer";
+    height: 100vh;
+    width: auto;
+}
+.grid-item1 {
+    background-image: linear-gradient(rgb(255, 238, 0), pink, grey);
+    padding: 100px;
+    text-align: center;
+    justify-content: center;
+    margin: 0px;
+    grid-area: container1;
+    border: 1px black solid;
+}
+.grid-item1 img {
+    border: 2px black solid;
+}
+.grid-item2 {
+    background-image: linear-gradient(rgb(255, 238, 0), pink, grey);
+    padding: 100px;
+    grid-area: container2;
+    text-align: center;
+    border: black 1px solid;
+}
+.grid-item2 img {
+    border: 2px black solid;
+}
+.grid-item3 {
+    background-color: salmon;
+    padding: 10px;
+    grid-area: container3;
+    background-image: linear-gradient(grey, lightblue);
+}
+.videos {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.grid-item4 {
+    padding: 100px;
+    grid-area: container4;
+    background-image: linear-gradient(lightblue, lightgreen);
+    border: 1px black solid;
+}
+.grid-item5 {
+    background-image: linear-gradient(lightgreen, lightpink);
+    padding: 100px;
+    grid-area: container5;
+    border: 1px black solid;
+}
+
+.contenedor-padre {
+    display: grid;
+    grid-template-areas: 
+    ". texto ."
+    ". youtube ."
+    ". twitch ."
+    ". instagram ."
+    ". twitter .";
+    margin: auto;
+    justify-content: center;
+    padding: 20px;
+    background: #B0B6BA;
+}
+.item-1 {
+    display: grid;
+    grid-area: youtube;
+    justify-content: center;
+}
+.item-2 {
+    display: grid;
+    grid-area: twitch;
+    justify-content: center;
+}
+.item-3 {
+    display: grid;
+    grid-area: instagram;
+    justify-content: center;
+}
+.item-4 {
+    display: grid;
+    grid-area: twitter;
+    justify-content: center;
+}
+.texto {
+    color: #FFD639;
+    background: #313B2F;
+    display: grid;
+    grid-area: texto;
+    border: 1px solid #B0B6BA;   
+    padding: 10px;
+    font-size: 30px;
+    width: auto;
+    height: 100%;
+    text-align: center;
+}
+.background-borde {
+    border: 2px solid #FFD639;
+    padding: 10px;
+    background: #6A736F;
+}
+/*---------------------------------------- FIN MAIN ----------------------------------------*/
+
+/*---------------------------------------- AREA FOOTER ----------------------------------------*/
+.grid-footer {
+    grid-area: footer;
+    background: #121317;
+    color: #BEC7C7;
+    padding: 30px;
+}
+.instagram {
+    display: flex;
+    justify-content: space-around;
+}
+/*---------------------------------------- FIN FOOTER ----------------------------------------*/
+
+
+
+/*---------------------------------------- AREA RESPONSVISE ---------------------------------------- */
+
+@media (min-width:300px) and (max-width:767px){
+    header nav {
+        display: flex;
+        line-height: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    header nav a {
+        font-size: 15px;
+        padding: 5px;
+        margin: auto;
+    }
+    .menuNav {
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        width: auto;
+        }
+    .menu {
+        position: static;
+        z-index: 0;
+    }
+    
+    .grid-item1 .masculinos {
+        display: none;
+    } 
+    .grid-item1 .masculinos-mobile {
+        width: auto;
+    }
+    .grid-item1 {
+        background-image: linear-gradient(rgb(255, 238, 0), pink, grey);
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        grid-area: container1;
+        border: 1px black solid;
+    }
+    .grid-item2 .femeninas {
+        display: none;
+    }
+    .grid-item2 .femeninas-mobile {
+        width: auto;
+    }
+    .grid-item2 {
+        background-image: linear-gradient(rgb(255, 238, 0), pink, grey);
+        padding: 5px;
+        text-align: center;
+        justify-content: center;
+        grid-area: container2;
+        border: 1px black solid;
+    }
+    .grid-item3 {
+        display: none;
+    }
+
+
+    .grid-item4 {
+        padding: 10px;
+        background-image: linear-gradient(rgb(255, 238, 0), pink, grey);
+    }
+
+    .grid-item5 {
+        padding: 10px;
+        background-image: linear-gradient(grey, lightblue);
+    }
+}
+
+@media (min-width:768px) and (max-width:1023px) {
+    header nav {
+        display: flex;
+        line-height: 10px;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+
+    }
+    header nav a {
+        font-size: 15px;
+        padding: 5px;
+        margin: auto;
+    }
+    .menuNav {
+        text-align: center;
+        justify-content: center;
+        justify-items: center;
+        width: auto;
+        }
+    .menu {
+        position: static;
+        z-index: 0;
+    }
+    .container-padre {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .grid-item2 {
+        background-image: linear-gradient(grey, rgb(255, 255, 120), rgb(66, 66, 204))
+    }
+    .grid-item3 {
+        background-image: linear-gradient(rgb(66, 66, 204), lightblue);
+    }
+    .masculinos-mobile {
+        display: none;
+    }
+    .femeninas-mobile {
+        display: none;
+    }
+}
+@media (min-width:769px) and (max-width:1920px){
+    .masculinos-mobile {
+        display: none;
+    }
+    .femeninas-mobile {
+        display: none;
+    }
+    .display-flex {
+        display: none;
+    }
+}
+@media screen and (min-width:425px){
+    header nav {
+        flex-direction: row;
+        margin: 10px auto;
+    }
+}
+/*---------------------------------------- FIN RESPONSIVE ----------------------------------------*/
+
